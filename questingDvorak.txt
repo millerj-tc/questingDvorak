@@ -23,7 +23,7 @@ HTMLIMAGE = 1, map~, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.4,.4,PM
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc <>""
-LINK ="C:\Users\16515\Downloads\LUDIC (25).xlsx"
+LINK ="C:\Users\16515\Downloads\LUDIC (27).xlsx"
 
 ;VISUAL = ,10,10
 IF = [Color] = "Orange"
