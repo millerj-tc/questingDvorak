@@ -23,7 +23,7 @@ HTMLIMAGE = 1, map~, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.4,.4,PM
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc <>""
-LINK ="C:\Users\16515\Downloads\LUDIC (27).xlsx"
+LINK ="C:\Users\16515\Downloads\questingDvorak.xlsx"
 
 ;VISUAL = ,10,10
 IF = [Color] = "Orange"
@@ -71,9 +71,6 @@ HTMLTEXT = , [FX], 4%, 59%, 93%, 35.7%, #FFFFFF, 0, EF, 100, effect
 
 IF = [Willpower]<>""
 HTMLTEXT = , [Willpower], 2%, 91.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
-ENDIF
-IF = [Level]<>""
-HTMLTEXT = , [Level], 2%, 12.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
 ENDIF
 IF = [Cost] <> ""
 HTMLTEXT = , [Cost], 2%, 12.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
