@@ -1,0 +1,111 @@
+[base_folder]=C:\nandeck(1)
+
+HTMLIMAGE = 1, boot&, "[base_folder]\tcgpics\cc0 icons\A_Shoes02.png",.675,.675,PM
+HTMLIMAGE = 1, boot~, "[base_folder]\tcgpics\cc0 icons\A_Shoes02.png",.4,.4,PM
+HTMLIMAGE = 1, stars&, "[base_folder]\tcgpics\cc0 icons\S_Light02.png",.675,.675,PM
+HTMLIMAGE = 1, stars~, "[base_folder]\tcgpics\cc0 icons\S_Light02.png",.4,.4,PM
+HTMLIMAGE = 1, wp&, "[base_folder]\tcgpics\cc0 icons\S_Magic02.png",.675,.675,PM
+HTMLIMAGE = 1, wp~, "[base_folder]\tcgpics\cc0 icons\S_Magic02.png",.4,.4,PM
+HTMLIMAGE = 1, proph&, "[base_folder]\tcgpics\cc0 icons\S_Light03.png",.675,.675,PM
+HTMLIMAGE = 1, proph~, "[base_folder]\tcgpics\cc0 icons\S_Light03.png",.4,.4,PM
+HTMLIMAGE = 1, rsrc&, "[base_folder]\tcgpics\cc0 icons\S_Magic01.png",.675,.675,PM
+HTMLIMAGE = 1, rsrc~, "[base_folder]\tcgpics\cc0 icons\S_Magic01.png",.4,.4,PM
+HTMLIMAGE = 1, book&, "[base_folder]\tcgpics\cc0 icons\W_Book01.png",.675,.675,PM
+HTMLIMAGE = 1, book~, "[base_folder]\tcgpics\cc0 icons\W_Book01.png",.4,.4,PM
+HTMLIMAGE = 1, grand&, "[base_folder]\tcgpics\cc0 icons\S_Buff12.png",.675,.675,PM
+HTMLIMAGE = 1, scroll&, "[base_folder]\tcgpics\cc0 icons\I_Scroll02.png",.675,.675,PM
+HTMLIMAGE = 1, staff&, "[base_folder]\tcgpics\cc0 icons\W_Staff05.png",.675,.675,PM
+HTMLIMAGE = 1, map&, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.675,.675,PM
+HTMLIMAGE = 1, map~, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.4,.4,PM
+
+; project ID = 2587359535
+
+LINKMULTI = num
+LINKNEW = <br>
+LINKFILTER = Inc <>""
+LINK ="C:\Users\16515\Downloads\questingDvorak (3).xlsx"
+
+;VISUAL = ,10,10
+IF = [Color] = "Orange"
+rectangle=,0,0,100%,100%,#FF9900
+ELSEIF = [Color] = "Blue"
+rectangle=,0,0,100%,100%,#3399FF
+ELSEIF = [Color] = "Green"
+rectangle=,0,0,100%,100%,#CCFF99
+ELSEIF = [Color] = "Purple"
+rectangle=,0,0,100%,100%,#9966CC
+ELSEIF = [Color] = "Red"
+rectangle=,0,0,100%,100%,#FF6666
+ELSEIF = [Color] = "Yellow"
+rectangle=,0,0,100%,100%,#FFFF66
+ELSEIF = [Color] = "Aqua"
+rectangle=,0,0,100%,100%, #00CCCC
+ELSEIF = [Color] = "Silver"
+rectangle=,0,0,100%,100%, #C0C0C0
+ELSEIF = [Color] = "Purple/Yellow"
+rectangle=,0,0,100%,50%,#9966CC
+rectangle=,0,50%,100%,50%,#FFFF66
+ELSEIF = [Color] = "Purple/Silver"
+rectangle=,0,0,100%,50%,#9966CC
+rectangle=,0,50%,100%,50%,#C0C0C0
+ELSEIF = [Color] = "Purple/Green"
+rectangle=,0,0,100%,50%,#9966CC
+rectangle=,0,50%,100%,50%,#CCFF99
+ELSE
+rectangle=,0,0,100%,100%, #FFFFFF
+ENDIF
+
+
+
+FONT = Arial, 16,F , #000000
+
+FONT = Arial, 22,F , #000000
+TEXT = , [Name], 2%, 2%, 96%, 8%
+HTMLFONT = awaken, Arial, 22, , #000000
+HTMLMARGINS = awaken, 0,0,0,0,center
+
+IMAGE = , [ImageLink], 0, 21.5%, 100%, 36.5%, 0, PNC
+
+IF = [Sorting] <> "Character"
+HTMLFONT = aN, "Agency FB",14,U,#000000
+HTMLTEXT = , [FX], 4%, 59%, 93%, 38%, #FFFFFF, 0, EF, 100, effect
+ELSE
+HTMLTEXT = , [FX], 4%, 59%, 93%, 35%, #FFFFFF, 0, EF, 100, effect
+ENDIF
+
+IF = [Willpower]<>""
+HTMLTEXT = , [Willpower], 2%, 91.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
+ENDIF
+IF = [Cost] <> ""
+HTMLTEXT = , [Cost], 2%, 12.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
+ENDIF
+;IF = [???] <> ""
+;HTMLTEXT= , [???], 2%, 12.5%, 18%, 8%,#FFFFFF ,0, EF,100,awaken
+;ENDIF
+;IF = [Color 2]<>""
+;HTMLTEXT =, [Color 2], 80%, 12.5%, 18%, 8%,#FFFFFF ,0,EF,100,awaken
+;ENDIF
+IF = [Type]<>""
+TEXT = ,[Type], 22%, 12.5%, 42%, 8%, center
+ENDIF
+
+
+
+HTMLFONT = lb, Arial, 8, , #000000
+HTMLFONT = effect, Arial, 15, , #000000
+HTMLFONT = ie, Arial, 15,I , #000000
+
+HTMLFONT = glimText, "Arial", 15,,#000000,center
+
+;IF = [ReverseCardEffect]<>""
+;HTMLTEXT = ,[ReverseCardEffect], 47%,90%, 12%, 8%, #FFFFFF, 0, EF, 100, effect
+;ENDIF
+
+;ENDVISUAL
+DISPLAY = 1.png,1,1
+DISPLAY = 2.png,2,2
+;DISPLAY = 2.png,2,2
+;DISPLAY = 3.png,3,3
+;DISPLAY = 4.png,4,4
+[all] = 1-{(Inc)}
+DISPLAY = deck3.png,1,50,10
