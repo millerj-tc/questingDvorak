@@ -17,40 +17,20 @@ HTMLIMAGE = 1, scroll&, "[base_folder]\tcgpics\cc0 icons\I_Scroll02.png",.675,.6
 HTMLIMAGE = 1, staff&, "[base_folder]\tcgpics\cc0 icons\W_Staff05.png",.675,.675,PM
 HTMLIMAGE = 1, map&, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.675,.675,PM
 HTMLIMAGE = 1, map~, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.4,.4,PM
+HTMLIMAGE = 1, mushroom&,"[base_folder]\tcgpics\cc0 icons\I_C_Mushroom.png",.675,.675,PM
+HTMLIMAGE = 1, feather&,"[base_folder]\tcgpics\cc0 icons\I_Feather02.png",.675,.675,PM
+HTMLIMAGE = 1, agate&,"[base_folder]\tcgpics\cc0 icons\I_Agate.png",.675,.675,PM
 
 ; project ID = 2587359535
 
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc <>""
-LINK ="C:\Users\16515\Downloads\questingDvorak (5).xlsx"
+LINK ="C:\Users\16515\Downloads\questingDvorak (6).xlsx"
 
 ;VISUAL = ,10,10
-IF = [Color] = "Orange"
-rectangle=,0,0,100%,100%,#FF9900
-ELSEIF = [Color] = "Blue"
-rectangle=,0,0,100%,100%,#3399FF
-ELSEIF = [Color] = "Green"
-rectangle=,0,0,100%,100%,#CCFF99
-ELSEIF = [Color] = "Purple"
+IF = [Sorting] = "Fey"
 rectangle=,0,0,100%,100%,#9966CC
-ELSEIF = [Color] = "Red"
-rectangle=,0,0,100%,100%,#FF6666
-ELSEIF = [Color] = "Yellow"
-rectangle=,0,0,100%,100%,#FFFF66
-ELSEIF = [Color] = "Aqua"
-rectangle=,0,0,100%,100%, #00CCCC
-ELSEIF = [Color] = "Silver"
-rectangle=,0,0,100%,100%, #C0C0C0
-ELSEIF = [Color] = "Purple/Yellow"
-rectangle=,0,0,100%,50%,#9966CC
-rectangle=,0,50%,100%,50%,#FFFF66
-ELSEIF = [Color] = "Purple/Silver"
-rectangle=,0,0,100%,50%,#9966CC
-rectangle=,0,50%,100%,50%,#C0C0C0
-ELSEIF = [Color] = "Purple/Green"
-rectangle=,0,0,100%,50%,#9966CC
-rectangle=,0,50%,100%,50%,#CCFF99
 ELSE
 rectangle=,0,0,100%,100%, #FFFFFF
 ENDIF
