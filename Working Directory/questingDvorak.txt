@@ -23,7 +23,7 @@ HTMLIMAGE = 1, map~, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.4,.4,PM
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc <>""
-LINK ="C:\Users\16515\Downloads\questingDvorak.xlsx"
+LINK ="C:\Users\16515\Downloads\questingDvorak (5).xlsx"
 
 ;VISUAL = ,10,10
 IF = [Color] = "Orange"
@@ -66,8 +66,12 @@ HTMLMARGINS = awaken, 0,0,0,0,center
 
 IMAGE = , [ImageLink], 0, 21.5%, 100%, 36.5%, 0, PNC
 
+IF = [Sorting] <> "Character"
 HTMLFONT = aN, "Agency FB",14,U,#000000
-HTMLTEXT = , [FX], 4%, 59%, 93%, 35.7%, #FFFFFF, 0, EF, 100, effect
+HTMLTEXT = , [FX], 4%, 59%, 93%, 38%, #FFFFFF, 0, EF, 100, effect
+ELSE
+HTMLTEXT = , [FX], 4%, 59%, 93%, 33.5%, #FFFFFF, 0, EF, 100, effect
+ENDIF
 
 IF = [Willpower]<>""
 HTMLTEXT = , [Willpower], 2%, 91.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
