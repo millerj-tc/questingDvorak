@@ -26,7 +26,7 @@ HTMLIMAGE = 1, agate!,"[base_folder]\tcgpics\cc0 icons\I_Agate.png",.9,.9,PM
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc <>""
-LINK ="C:\Users\16515\Downloads\questingDvorak (8).xlsx"
+LINK ="C:\Users\16515\Downloads\questingDvorak (9).xlsx"
 
 ;VISUAL = ,10,10
 IF = [Sorting] = "Fey"
