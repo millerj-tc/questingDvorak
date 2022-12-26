@@ -13,6 +13,7 @@ HTMLIMAGE = 1, rsrc~, "[base_folder]\tcgpics\cc0 icons\S_Magic01.png",.4,.4,PM
 HTMLIMAGE = 1, book&, "[base_folder]\tcgpics\cc0 icons\W_Book01.png",.675,.675,PM
 HTMLIMAGE = 1, book~, "[base_folder]\tcgpics\cc0 icons\W_Book01.png",.4,.4,PM
 HTMLIMAGE = 1, grand&, "[base_folder]\tcgpics\cc0 icons\S_Buff12.png",.675,.675,PM
+HTMLIMAGE = 1, grand~, "[base_folder]\tcgpics\cc0 icons\S_Buff12.png",.4,.4,PM
 HTMLIMAGE = 1, scroll&, "[base_folder]\tcgpics\cc0 icons\I_Scroll02.png",.675,.675,PM
 HTMLIMAGE = 1, staff&, "[base_folder]\tcgpics\cc0 icons\W_Staff05.png",.675,.675,PM
 HTMLIMAGE = 1, map&, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.675,.675,PM
@@ -20,17 +21,20 @@ HTMLIMAGE = 1, map~, "[base_folder]\tcgpics\cc0 icons\I_Map.png",.4,.4,PM
 HTMLIMAGE = 1, mushroom!,"[base_folder]\tcgpics\cc0 icons\I_C_Mushroom.png",.9,.9,PM
 HTMLIMAGE = 1, feather!,"[base_folder]\tcgpics\cc0 icons\I_Feather02.png",.9,.9,PM
 HTMLIMAGE = 1, agate!,"[base_folder]\tcgpics\cc0 icons\I_Agate.png",.9,.9,PM
+HTMLIMAGE = 1, trigger&,"[base_folder]\tcgpics\cc0 icons\S_Thunder04.png",.675,.675,PM
+HTMLIMAGE = 1, trigger~,"[base_folder]\tcgpics\cc0 icons\S_Thunder04.png",.4,.4,PM
+HTMLIMAGE = 1, trigger!,"[base_folder]\tcgpics\cc0 icons\S_Thunder04.png",.9,.9,PM
 
 ; project ID = 2587359535
 
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc <>""
-LINK ="C:\Users\16515\Downloads\questingDvorak (9).xlsx"
+LINK ="C:\Users\16515\Downloads\questingDvorak (1).xlsx"
 
 ;VISUAL = ,10,10
-IF = [Sorting] = "Fey"
-rectangle=,0,0,100%,100%,#9966CC
+IF = [Sorting] = "Event - Trigger"
+rectangle=,0,0,100%,100%,#FFD700
 ELSE
 rectangle=,0,0,100%,100%, #FFFFFF
 ENDIF
@@ -47,25 +51,30 @@ HTMLMARGINS = awaken, 0,0,0,0,center
 
 IMAGE = , [ImageLink], 0, 21.5%, 100%, 36.5%, 0, PNC
 
-IF = [Sorting] <> "Character"
+IF = "Character" # [Sorting]
     HTMLFONT = aN, "Agency FB",14,U,#000000
     HTMLTEXT = , [FX], 4%, 59%, 93%, 38%, #FFFFFF, 0, EF, 100, effect
-    ELSEIF = [Sorting] = "Fey"
-    HTMLTEXT = , [FX], 4%, 59%, 93%, 33.5%, #FFFFFF, 0, EF, 100, awakenHuge
+;    ELSEIF = [Sorting] = "Fey"
+;    HTMLTEXT = , [FX], 4%, 59%, 93%, 33.5%, #FFFFFF, 0, EF, 100, awakenHuge
     ELSE
-    HTMLTEXT = , [FX], 4%, 59%, 93%, 33.5%, #FFFFFF, 0, EF, 100, effect
+    HTMLTEXT = , [FX], 4%, 59%, 93%, 35%, #FFFFFF, 0, EF, 100, effect
 ENDIF
 
 IF = [Willpower]<>""
 HTMLTEXT = , [Willpower], 2%, 91.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
 ENDIF
 IF = [Cost] <> ""
-IF = [Sorting] = "Fey"
-HTMLTEXT = , [Cost], 2%, 12.5%, 37%, 12%,#FFFFFF ,0, EF,100,awakenHuge
-ELSE
-HTMLTEXT = , [Cost], 2%, 12.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
+    IF = [Sorting] = "Fey"
+    HTMLTEXT = , [Cost], 2%, 12.5%, 37%, 12%,#FFFFFF ,0, EF,100,awakenHuge
+    ELSE
+    HTMLTEXT = , [Cost], 2%, 12.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
+    ENDIF
 ENDIF
+
+IF = [hasTrigger] <> ""
+HTMLTEXT = , [hasTrigger], 82%, 12.5%, 32%, 12%,#FFFFFF ,0, EF,100,awaken
 ENDIF
+
 ;IF = [???] <> ""
 ;HTMLTEXT= , [???], 2%, 12.5%, 18%, 8%,#FFFFFF ,0, EF,100,awaken
 ;ENDIF
@@ -93,12 +102,12 @@ HTMLFONT = glimText, "Arial", 15,,#000000,center
 ;ENDIF
 
 ;ENDVISUAL
-DISPLAY = 1.png,1,1
-DISPLAY = 2.png,2,2
+;DISPLAY = 1.png,1,1
 ;DISPLAY = 2.png,2,2
-;DISPLAY = 3.png,3,3
-;DISPLAY = 4.png,4,4
-[all] = 1-{(Inc)}
-DISPLAY = deck3.png,1,50,10
+;;DISPLAY = 2.png,2,2
+;;DISPLAY = 3.png,3,3
+;;DISPLAY = 4.png,4,4
+;[all] = 1-{(Inc)}
+;DISPLAY = deck3.png,1,50,10
 
 save=,"[Name].png"
