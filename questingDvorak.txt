@@ -30,7 +30,7 @@ HTMLIMAGE = 1, trigger!,"[base_folder]\tcgpics\cc0 icons\S_Thunder04.png",.9,.9,
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc <>""
-LINK ="C:\Users\16515\Downloads\questingDvorak (6).xlsx"
+LINK ="C:\Users\16515\Downloads\questingDvorak (8).xlsx"
 
 ;VISUAL = ,10,10
 IF = "(Trigger)" @ [Sorting]
@@ -46,6 +46,8 @@ FONT = Arial, 16,F , #000000
 FONT = Arial, 22,F , #000000
 TEXT = , [Name], 2%, 2%, 96%, 8%
 HTMLFONT = awaken, Arial, 22, , #000000
+HTMLFONT = awakenWP, Arial, 20, , #000000,center
+HTMLFONT = awakenLittle, Arial, 5.5, , #000000
 HTMLFONT = awakenHuge,Arial, 36, ,#000000
 HTMLMARGINS = awaken, 0,0,0,0,center
 
@@ -53,15 +55,15 @@ IMAGE = , [ImageLink], 0, 21.5%, 100%, 36.5%, 0, PNC
 
 IF = "Character" # [Sorting]
     HTMLFONT = aN, "Agency FB",14,U,#000000
-    HTMLTEXT = , [FX], 4%, 59%, 93%, 38%, #FFFFFF, 0, EF, 100, effect
+    HTMLTEXT = , [FX], 4%, 59%, 93%, 38%, #dfeaef, 0, EF, 100, effect
 ;    ELSEIF = [Sorting] = "Fey"
 ;    HTMLTEXT = , [FX], 4%, 59%, 93%, 33.5%, #FFFFFF, 0, EF, 100, awakenHuge
     ELSE
-    HTMLTEXT = , [FX], 4%, 59%, 93%, 35%, #FFFFFF, 0, EF, 100, effect
+    HTMLTEXT = , [FX], 4%, 59%, 93%, 34.25%, #dfeaef, 0, EF, 100, effect
 ENDIF
 
 IF = [Willpower]<>""
-HTMLTEXT = , [Willpower], 2%, 91.5%, 32%, 8%,#FFFFFF ,0, EF,100,awaken
+HTMLTEXT = , [Willpower], 2%, 91.5%, 32%, 8%,#ADD8E6 ,0, EF,100,awakenWP
 ENDIF
 IF = [Cost] <> ""
     IF = [Sorting] = "Fey"
@@ -85,11 +87,11 @@ IF = [Type]<>""
     IF = [Sorting] = "Fey"
     TEXT = ,[Type], 42%, 12.5%, 42%, 8%, center
     ELSE
-    TEXT = ,[Type], 22%, 12.5%, 42%, 8%, center
+    TEXT = ,[Type], 19%, 10.5%, 61%, 10%, center
     ENDIF
 ENDIF
 
-
+HTMLTEXT = , [DesArt], 78%, 97.1%, 32%, 5%,#D3D3D3 ,0, EF,100,awakenLittle
 
 HTMLFONT = lb, Arial, 8, , #000000
 HTMLFONT = effect, Arial, 15, , #000000
@@ -110,4 +112,4 @@ HTMLFONT = glimText, "Arial", 15,,#000000,center
 ;[all] = 1-{(Inc)}
 ;DISPLAY = deck3.png,1,50,10
 
-save=,"[Name].png"
+;save=,"[Name].png"
