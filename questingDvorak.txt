@@ -30,7 +30,7 @@ HTMLIMAGE = 1, trigger!,"[base_folder]\tcgpics\cc0 icons\S_Thunder04.png",.9,.9,
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc <>""
-LINK ="C:\Users\16515\Downloads\questingDvorak (8).xlsx"
+LINK ="C:\Users\16515\Downloads\questingDvorak (11).xlsx"
 
 ;VISUAL = ,10,10
 IF = "(Trigger)" @ [Sorting]
@@ -55,11 +55,11 @@ IMAGE = , [ImageLink], 0, 21.5%, 100%, 36.5%, 0, PNC
 
 IF = "Character" # [Sorting]
     HTMLFONT = aN, "Agency FB",14,U,#000000
-    HTMLTEXT = , [FX], 4%, 59%, 93%, 38%, #dfeaef, 0, EF, 100, effect
+    HTMLTEXT = , [FX], 4%, 59%, 93%, 38%, #FFFFFF, 0, EF, 100, effect
 ;    ELSEIF = [Sorting] = "Fey"
 ;    HTMLTEXT = , [FX], 4%, 59%, 93%, 33.5%, #FFFFFF, 0, EF, 100, awakenHuge
     ELSE
-    HTMLTEXT = , [FX], 4%, 59%, 93%, 34.25%, #dfeaef, 0, EF, 100, effect
+    HTMLTEXT = , [FX], 4%, 59%, 93%, 34.25%, #FFFFFF, 0, EF, 100, effect
 ENDIF
 
 IF = [Willpower]<>""
@@ -112,4 +112,4 @@ HTMLFONT = glimText, "Arial", 15,,#000000,center
 ;[all] = 1-{(Inc)}
 ;DISPLAY = deck3.png,1,50,10
 
-;save=,"[Name].png"
+save=,"[Name].png"
