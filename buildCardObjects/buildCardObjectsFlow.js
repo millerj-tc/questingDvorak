@@ -9,8 +9,6 @@ export function BuildCardObjectsFlow()
     
     const splitCardList = cardListString.split(`@@@`);
     
-    //console.log(splitCardList);
-    
     const objProps = splitCardList[0].split(",$$$,");
     
     for(let i=0; i<objProps.length; i++){objProps[i] = objProps[i].replace("\n","")}
@@ -26,12 +24,13 @@ function _BuildCard(propList,arrayEntry,cardRefNum){
     
     //start on i=1 to skip "inc"
     
-    for(let i=0; i<propList.length; i++){
-        
+    for(let i=1; i<propList.length; i++){
+                
         if(propList[i] == "") continue
         
         cardObj[propList[i]] = splitArrayEntry[i].replace(/\"/g,"");
     }
+    
     
     cardObj["gitImage"] = "https://millerj-tc.github.io/questingDvorak/Card%20Images/" + cardObj.Name.replace(" ","%20")+".png";
     

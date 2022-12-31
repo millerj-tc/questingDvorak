@@ -11,6 +11,8 @@ export class cardHandler
         
         const cardCopy = JSON.parse(JSON.stringify(card))
         
+        if(this.DeckIncludes(card) == 4) return
+        
         this.cards.push(cardCopy);
         
     }
