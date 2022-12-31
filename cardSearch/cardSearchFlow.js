@@ -1,6 +1,12 @@
-export function cardSearchFlow(){
+
+import {GetOrCreateDivInsideDOM} from "./../uiUtils.js"
+
+export function CardSearchFlow(){
     
-    let returnedCards = CardsThatMeetSearchFilters();
+    //let returnedCards = CardsThatMeetSearchFilters();
     
-    DisplayCardsOnGrid(returnedCards);
+    //_DisplayCardsOnGrid();
+    
 }
+
+function _DisplayCardsOnGrid(array){}

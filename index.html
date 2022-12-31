@@ -1,5 +1,10 @@
 <head>
-
+<script type="module">
+import {BuildCardObjectsFlow} from './buildCardObjects/BuildCardObjectsFlow.js';
+        window.onload = BuildCardObjectsFlow;
+import {cardHandler} from "./cardSearch/cardHandler.js";
+        window.masterCardHandler = new cardHandler();
+</script>
 </head>
 
 <link rel="stylesheet" type="text/css" href="style.css"/>

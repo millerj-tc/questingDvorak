@@ -1,11 +1,15 @@
-export class userDecklist
+export class cardHandler
 {
     constructor(){
         
+        this.cards = [];
+        
     }
+    
     
     AddCard(card){
         
+        this.cards.push(card);
         
     }
     
