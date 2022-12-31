@@ -4,6 +4,7 @@ import {OnLoad} from './onLoad.js';
         window.onload = OnLoad;
 import {cardHandler} from "./cardSearch/cardHandler.js";
         window.masterCardHandler = new cardHandler();
+        window.masterCardHandler.userDeck = false;
         window.userCardHandler = new cardHandler();
 import {Get} from "./buildExportDeck/exportCSV.js";
         window.Get = Get;
@@ -22,5 +23,6 @@ import {CardSearchFlow} from "./cardSearch/cardSearchFlow.js";
     <button class="bigSearchButton" onclick="window.CardSearchFlow('set2Only')">Show Set 2 cards only</button>
     <button class="bigSearchButton" onclick="window.CardSearchFlow()">Show all cards</button>
 </div>
+<div id="userDeckCardCount" class="userDeckCardCount">Card count: 0</div>
 
 <div class="cardGridDisplay" id="cardGridDisplay"></div>

@@ -3,7 +3,7 @@ export class cardHandler
     constructor(){
         
         this.cards = [];
-        
+        this.userDeck = true;
     }
     
     
@@ -12,6 +12,7 @@ export class cardHandler
         const cardCopy = JSON.parse(JSON.stringify(card))
         
         if(this.DeckIncludes(card) == 4) return
+        if(this.userDeck && this.cards.length == 50) return
         
         this.cards.push(cardCopy);
         

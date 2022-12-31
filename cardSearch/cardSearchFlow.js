@@ -1,5 +1,6 @@
 
 import {GetElementById, GetOrCreateDivInsideDOM, CreateElement,ClearAllChildren} from "./../uiUtils.js"
+import {UpdateUserDeckCardCount} from "./../ui.js"
 
 export function CardSearchFlow(searchmode){
     
@@ -106,14 +107,15 @@ function _DisplayCardsOnGrid(cardArr){
         cardImageIncButton.onclick = function(){
             userCardHandler.AddCard(card);
             cardImageNumIndic.innerHTML = window.userCardHandler.DeckIncludes(card);
-            console.log(window.userCardHandler.cards);
+            UpdateUserDeckCardCount();
+            
         }
         
         cardImageDecButton.onclick = function(){
             userCardHandler.RemoveCard(card);
             cardImageNumIndic.innerHTML = userCardHandler.DeckIncludes(card);
             console.log(window.userCardHandler.cards);
-
+            UpdateUserDeckCardCount();
         }
 
         const cardImg = CreateElement("img");
