@@ -1,5 +1,7 @@
 <head>
 <script type="module">
+import {CardSearchFlow} from "./cardSearch/cardSearchFlow.js";
+        window.CardSearchFlow = CardSearchFlow;
 import {OnLoad} from './onLoad.js';
         window.onload = OnLoad;
 import {cardHandler} from "./cardSearch/cardHandler.js";
@@ -8,8 +10,7 @@ import {cardHandler} from "./cardSearch/cardHandler.js";
         window.userCardHandler = new cardHandler();
 import {Get} from "./buildExportDeck/exportCSV.js";
         window.Get = Get;
-import {CardSearchFlow} from "./cardSearch/cardSearchFlow.js";
-        window.CardSearchFlow = CardSearchFlow;
+
 </script>
 </head>
 
