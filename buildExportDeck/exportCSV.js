@@ -52,7 +52,7 @@ function MakeCSV (objArr) {
 //
 //	// Returning the array joining with new line
 //	return csvRows.join('\n')
-//}
+}
 
 export async function Get(objArr) {
 
