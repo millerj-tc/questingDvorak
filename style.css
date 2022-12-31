@@ -1,3 +1,30 @@
 .cardGridDisplay{
     display:grid;
+    grid-template-columns:auto auto auto auto auto;
+}
+
+.cardImageControls{
+    display:grid;
+    grid-template-columns:auto auto auto;
+    outline-style:solid;
+    margin:8px;
+}
+
+.cardImageNumIndic{
+    text-align:center;
+}
+
+.cardImageDiv{
+    
+    width:225px;
+    height:350px;
+    margin: 20px;
+    margin-bottom: 30px;
+    outline-style: solid;
+}
+
+.cardImg{
+    
+    width:inherit;
+    height:inherit;
 }

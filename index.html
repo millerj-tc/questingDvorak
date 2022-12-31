@@ -1,14 +1,25 @@
 <head>
 <script type="module">
-import {BuildCardObjectsFlow} from './buildCardObjects/BuildCardObjectsFlow.js';
-        window.onload = BuildCardObjectsFlow;
+import {OnLoad} from './onLoad.js';
+        window.onload = OnLoad;
 import {cardHandler} from "./cardSearch/cardHandler.js";
         window.masterCardHandler = new cardHandler();
+        window.userCardHandler = new cardHandler();
+import {Get} from "./buildExportDeck/exportCSV.js";
+        window.Get = Get;
+import {CardSearchFlow} from "./cardSearch/cardSearchFlow.js";
+        window.CardSearchFlow = CardSearchFlow;
 </script>
 </head>
 
 <link rel="stylesheet" type="text/css" href="style.css"/>
 
-<div class="searchOptions" id="searchOptions"></div>
+<button onclick="window.Get(window.userCardHandler.cards)">Download deck .csv</button>
+
+<div class="searchOptions" id="searchOptions">
+    <button onclick="window.CardSearchFlow('cardsInDeck')">Show cards in deck</button>
+    <button onclick="window.CardSearchFlow('cardsNotInDeck')">Show cards NOT in deck</button>
+    <button onclick="window.CardSearchFlow()">Show all cards</button>
+</div>
 
 <div class="cardGridDisplay" id="cardGridDisplay"></div>
