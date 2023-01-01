@@ -30,7 +30,7 @@ HTMLIMAGE = 1, trigger!,"[base_folder]\tcgpics\cc0 icons\S_Thunder04.png",.9,.9,
 LINKMULTI = num
 LINKNEW = <br>
 LINKFILTER = Inc = "@@@"
-LINK ="C:\Users\16515\Downloads\cardList (18).xlsx"
+LINK ="C:\Users\16515\Downloads\cardList (20).xlsx"
 
 ;VISUAL = ,10,10
 
