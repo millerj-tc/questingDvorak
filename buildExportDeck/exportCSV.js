@@ -93,6 +93,8 @@ function _BuildSingleArrWithCardCopyCount(arr){
 }
 
 export async function Get(objArr) {
+    
+    if(objArr.length < 50) window.confirm("Deck has fewer than 50 cards. Continue?");
 
 	const csvdata = MakeCSV(objArr);
 	Download(csvdata);
