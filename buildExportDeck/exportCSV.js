@@ -39,7 +39,9 @@ function MakeCSV (objArr) {
 	// Pushing Object values into array
 	// with comma separation
     
-    for(const o of objArr){
+    const csvArr = _BuildSingleArrWithCardCopyCount(objArr);
+    
+    for(const o of csvArr){
         
         console.log(o);
         
@@ -47,11 +49,47 @@ function MakeCSV (objArr) {
         
         if(modGitImage.match(",") != null) modGitImage = `"` + modGitImage + `"`;
         
-        csvRows.push(modGitImage + ",,1,");
+        csvRows.push(modGitImage + ",," + o.count + ",");
     }
 
 	// Returning the array joining with new line
 	return csvRows.join('\n')
+}
+
+function _BuildSingleArrWithCardCopyCount(arr){
+    
+    const returnArr = [];
+    
+    for(const o of arr){
+        
+        let cont = false;
+        
+        for(const ro of returnArr){
+                
+            if(ro.cardRefNum == o.cardRefNum) cont = true
+        }
+        
+        if(cont) continue
+        
+        let oCount = 0;
+        
+        for(const oo of arr){
+            
+            if(o.cardRefNum == oo.cardRefNum){
+                
+                oCount++;
+            }
+        }
+        
+        const csvCardCopy = JSON.parse(JSON.stringify(o));
+        
+        csvCardCopy.count = oCount;
+        
+        returnArr.push(csvCardCopy);
+    }
+    
+    return returnArr
+    
 }
 
 export async function Get(objArr) {
