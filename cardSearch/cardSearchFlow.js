@@ -3,7 +3,7 @@ import {GetElementById, GetOrCreateDivInsideDOM, CreateElement,ClearAllChildren}
 import {UpdateUserDeckCardCount} from "./../ui.js"
 
 export function CardSearchFlow(searchmode){
-    
+        
     const returnedCards = _SearchmodeArr(searchmode);
     
     _DisplayCardsOnGrid(returnedCards);
